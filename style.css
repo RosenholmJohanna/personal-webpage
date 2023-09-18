@@ -1,0 +1,64 @@
+:root{
+  --white:#fffff7;
+  --background:#021118;
+}
+  
+body{
+  font-family:'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  color:var(--white); 
+  background-color:var(--background);
+}
+  
+/***** FONTS/TEXT  *****************************************************/
+h1{
+  width:60%;
+  margin-top:0;
+  margin-bottom: 1%;
+  margin-left: 2%;
+  padding-top: 1%;
+  font-family: 'Tangerine';
+  font-size: 45px;
+}
+  
+h2{
+  font-size: 16px;
+  font-weight: bold;  
+  margin-top:0;
+}
+  
+h3{
+  font-size: 14px;
+  text-align: center;
+}
+  
+p{
+  font-size: 12px;
+  margin:0;
+}
+
+
+/****** HEADER  ********************************************************/
+header{
+  background-repeat: no-repeat;
+  height:30vh;
+  position:relative;
+}
+  
+.profile-picture {
+  height: 16vh;
+  width: 16vh;
+  border-radius:50%;
+  position:absolute;
+  right: 5%; 
+  bottom: -6%;
+  object-fit: cover;
+}
+
+  
+/***** ABOUT ME SECTION  **************************************************/
+.about-me-section{
+  text-align: center;
+  margin: 8%;
+}
+  
