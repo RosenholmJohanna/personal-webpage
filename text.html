@@ -14,13 +14,24 @@
   </head>
 
 <header>
+  <div class="navigation-header">
+    <div class="burger" id="burger">
+    </div>
+      <nav id="nav">
+        <a class="active" href="#">topic</a>
+        <a href="#">topic</a>
+        <a href="#">topic</a>
+        <a href="#">topic</a>
+        <a href="#">topic</a>
+      </nav>
+  </div>
+
   <div> <img class="profile-picture" src="profilbild.jpg" alt="profilbild"></div> 
   <div>
     <h1>Johanna Rosenholm</h1>
     <p class="sub-header">Min personliga webbsida</p>
   </div>
 </header>
-      
 <body>  
   <section class="about-me-section">
     <p>
@@ -30,6 +41,79 @@
     </p>
   </section> 
 
+  <div class="panel-wrapper">
+    <input class="radio" id="one" name="group" type="radio"> 
+    <input class="radio" id="two" name="group" type="radio" checked>
+    <input class="radio" id="three" name="group" type="radio">
+    <input class="radio" id="four" name="group" type="radio"> 
+  
+  <div class="tabs">
+    <label class="tab" id="one-tab" for="one">Who am I</label>
+    <label class="tab" id="two-tab" for="two">Back then</label>
+    <label class="tab" id="three-tab" for="three">What now</label>
+    <label class="tab" id="four-tab" for="four">Interests</label>
+  </div>
+
+<div class="panels">
+  <div class="panel" id="one-panel">
+    <div class="panel-title">Topic 1</div>
+      <div class ="panel-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nobis quibusdam atque dignissimos. Corrupti numquam commodi sunt tempore hic,
+         distinctio, molestiae ducimus cupiditate quo minus. hufe huehufh ehuhue ogierihg hiruhgiuer hieuhrihg hiuerhiguh hieruhguiher jiehrgiueh joiheih hiuehuighe hiehgiehru hiheiruhguireh .
+      </div>
+      <a href="https://www.aftonbladet.se">Läs mer</a>
+      <img src="" class="" alt="bild">
+  </div>
+
+  <div class="panel" id="two-panel">
+    <div class="text-box">
+      <img class="panel-picture" src="profilbild.jpg" alt="bild">
+      <h5>title title</h5>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque optio dolores unde
+        nobis fuga corporis expedita earum cum esse, similique temporibus consequuntur. 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Quisquam laborum magnam repudiandae blanditiis nihil, aliquam, vitae.
+      </p>
+      <a class="a-panel" href="https://www.aftonbladet.se">Läs mer</a>
+    </div>
+    </div>
+  
+  <div class="panel" id="three-panel"></div>
+  <div class="panel" id="four-panel"></div>
+</div>
+ </div> 
+
+ <section class="section-form"> 
+    <h3 class="h4">Contact</h3>
+    <form class="myForm" type="submit">
+      <div class="message">
+        <label for="msg">Message</label>
+        <textarea id="msg" required></textarea>
+        <button class="contact-button" type="submit">SEND</button>
+      </div>
+      </div>
+      <div class="contact">
+        <label for="name">Name</label>
+        <input type="text" id="name">
+        <label for="email">Email Address</label>
+        <input type="email" id="email"> 
+        <label for="country">Country</label>
+      <div class ="select">
+        <select id="country" title="country">
+          <option value="" selected="selected">Select One</option>
+          <option value="sweden" >Sweden</option>
+          <option value="italy" >Italy</option>
+          <option value="use" >USA</option>
+          <option value="spain" >spain</option>
+          <option value="finland" >finland</option>
+          <option value="denmark" >denmark</option>
+        </select>
+      </div>
+        <div>
+      </div>
+    </form>
+  </section>
+
   <footer>
     <div class="footer-text">Johanna Rosenholm</div>
       <div class="links">
@@ -38,6 +122,8 @@
        <div><a href="www.aftonbladet.se">Github</a></div>
     </div>  
   </footer>
+
+  <script src="script.js"></script>
 </body>
 
       
