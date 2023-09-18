@@ -61,4 +61,11 @@ header{
   text-align: center;
   margin: 8%;
 }
+
+
+/***** FOOTER  **************************************************/
+footer {
+    padding: 8px;
+    text-align: center;
+  }
   
