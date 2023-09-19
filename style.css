@@ -4,6 +4,10 @@
   --tab-background:#272a38;
   --primary-blue:#00E0FE;
 }
+
+*{
+    box-sizing: border-box;
+}
   
 body{
   font-family:'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
@@ -12,10 +16,10 @@ body{
   background-color:var(--background);
 }
 
-header{
+/* header{
   background-image: url(https://images.pexels.com/photos/3661924/pexels-photo-3661924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
   background-size: cover;
-}
+} */
   
 /***** FONTS/TEXT  *****************************************************/
 h1{
@@ -39,11 +43,23 @@ h3{
   text-align: center;
 }
 
+/* .h4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.h4{
+    display: block;
+    margin-top:5%;
+    padding-top: 2%;
+}
+
 h5{
   text-align: center;
-  width: 50%;
+  width: 70%;
   font-size: 1rem;
-  margin: 2px 20px 2px 20px;
+  margin: 0 10px 0 10px;
 }
   
 p{
@@ -63,7 +79,9 @@ button {
   letter-spacing: 0.7px;
 }
 
-
+.active{
+    margin: 0;
+}
 
 /****** HEADER  ********************************************************/
 header{
@@ -87,13 +105,14 @@ header{
 .navigation-header {
   display: flex;
   height: 40px;
-  align-items: center;
-  justify-content: center;
+  align-items: stretch;
+  justify-content: flex-end;
   position: relative;
+  flex-direction: column-reverse;
 } 
 
 nav{
-	display: none;
+  display: none;
 }
 
 .burger{
@@ -124,6 +143,7 @@ nav{
 /****** TAB & PANELS ***************************************************/
 .tabs {
   display: flex; 
+  column-gap: 5%;
   justify-content: space-between;
   height: 50px;
   align-items: center;
@@ -137,9 +157,13 @@ nav{
   padding:5px 5px;
   display:inline-block;
   border-radius:5px 5px 5px 5px; 
-  margin: 0;
-  margin-right: 2%;
+  /* margin: 0; */
+  /* margin-right: 2%; */
 }
+
+/* label{
+  margin:0;
+} */
 
 .panels{
   border-radius: 5px 5px 5px 5px;
@@ -168,10 +192,10 @@ nav{
 }
 
 .panel-picture{
- display: flex; 
+  display: flex; 
   grid-column: span 2; 
-  max-width: 30vh;
-  max-height:25vh; 
+  max-width: 20vh;
+  max-height:20vh; 
   border-radius: 5px 5px 5px 5px;
 }  
 
@@ -191,14 +215,14 @@ nav{
 }
 
 .panel-text{
-font-size: 0.7em;
+  font-size: 0.7em;
 
 }
 
 .a-panel{
   width: 50%;
   text-align: center;
-  margin: 2%;
+  margin: 0 10px 0 10px;
 }
 
 .radio{
@@ -209,9 +233,9 @@ font-size: 0.7em;
 #two:checked ~ .panels #two-panel,
 #three:checked ~ .panels #three-panel,
 #four:checked ~ .panels #four-panel
-  {
-    display:flex;
-  }
+{
+  display:flex;
+}
 
   #one:checked ~ .tabs #one-tab, 
   #two:checked ~ .tabs #two-tab,
@@ -226,19 +250,25 @@ font-size: 0.7em;
 /**** FORM ******************************************************/
 
  .section-form{
-  background-color:var(--tab-background); 
   border-radius: 5px 5px 5px 5px;
+  background-color:var(--tab-background); 
+  margin: 2%;
+
  }
 
  .myForm {
+   height: 35vh;
    display: flex;
+   flex-direction: row;
    border-radius: 3px;
    padding: 4.1em;
+   margin: 2%;
  }
 
  textarea{
   padding: 0.5em;
   margin:0;
+  font-size: 12px;
  }
 
  .message {
@@ -256,11 +286,13 @@ font-size: 0.7em;
  .contact {
    flex: 1; 
    order: 1;
-   margin-right: 4em;  
+   margin-right: 5%;
  }
 
  .contact input {
    width: 100%;
+   margin-top: 1%;
+   margin-bottom: 2%;
  }
 
  .contact input, 
@@ -271,11 +303,21 @@ font-size: 0.7em;
   border-radius: 3px 3px 3px 3px;
 } 
 
+.message-label {
+  margin-bottom:2%;
+}
+
+select{
+ margin-top:1%
+}
+
+
 /***** FOOTER  **************************************************/
 footer {
   padding: 8px;
   text-align: center;
 }
+
 
 a{
   margin: 2%;
@@ -344,7 +386,20 @@ a{
       {
         display:block;
       }
+    
+    .contact-button{
+      font-size: 10px;
+      padding: 1px;
+      width: 5em;
+      height:25px;
+    }
 
+    .myForm {
+        display: flex;
+        flex-direction: column;
+        border-radius: 3px;
+        padding: 2.1em;
+      }
 }
 
   
