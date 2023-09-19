@@ -7,6 +7,7 @@
 
 *{
     box-sizing: border-box;
+    /* margin-left: 5%; */
 }
   
 body{
@@ -59,7 +60,7 @@ h5{
   text-align: center;
   width: 70%;
   font-size: 1rem;
-  margin: 0 10px 0 10px;
+  margin: 0px 10px 0 10px;
 }
   
 p{
@@ -161,10 +162,6 @@ nav{
   /* margin-right: 2%; */
 }
 
-/* label{
-  margin:0;
-} */
-
 .panels{
   border-radius: 5px 5px 5px 5px;
   padding:3%;
@@ -177,9 +174,9 @@ nav{
   grid-template-columns: 1fr;
   display:none; 
   animation: fadein 3s;
-  border: 0.5px solid; 
+  /* border: 0.5px solid;  */
   background-color: var(--tab-background);
-  border-radius: 0.5px solid;
+  /* border-radius: 0.5px solid; */
 }
   @keyframes fadein {
     from{
@@ -202,7 +199,7 @@ nav{
 .text-box{
   display: flex;
   grid-column: span 2;
-  padding: 2%;
+  /* padding: 2%; */
   flex-direction: row;
   width: 100%;
   justify-content: center;
@@ -220,8 +217,8 @@ nav{
 }
 
 .a-panel{
-  width: 50%;
-  text-align: center;
+  text-align: right;
+  width: 80%;
   margin: 0 10px 0 10px;
 }
 
@@ -253,16 +250,19 @@ nav{
   border-radius: 5px 5px 5px 5px;
   background-color:var(--tab-background); 
   margin: 2%;
+  height: 45vh;
+  /* overflow: auto; */
 
  }
 
  .myForm {
-   height: 35vh;
+   height: 40vh;
    display: flex;
    flex-direction: row;
    border-radius: 3px;
    padding: 4.1em;
    margin: 2%;
+   border: 0.5px solid;
  }
 
  textarea{
@@ -290,7 +290,8 @@ nav{
  }
 
  .contact input {
-   width: 100%;
+display: block;
+   width: 80%;
    margin-top: 1%;
    margin-bottom: 2%;
  }
@@ -305,23 +306,44 @@ nav{
 
 .message-label {
   margin-bottom:2%;
+  font-size: 12px;
 }
 
+.contact-label{
+  margin:0;
+  font-size: 12px;
+} 
 select{
- margin-top:1%
+ margin-top:1%;
+ margin-bottom:2%;
 }
 
 
 /***** FOOTER  **************************************************/
 footer {
-  padding: 8px;
-  text-align: center;
+  padding-top: 3%;
+  padding-bottom: 3%;
+} 
+
+footer p{
+    font-size: 1rem;
+  }
+
+ol{
+    padding:0;
 }
 
+.footer-container {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   } 
 
 a{
-  margin: 2%;
-  font-size: 12px;
+display: block;
+  margin: 1%; 
+  font-size: 0.8em;
   font-weight: bolder;
   color: var(--white);
   text-transform: uppercase;
@@ -348,8 +370,20 @@ a{
 /*******  ON MOBILE  ********/
 @media screen and (max-width: 667px) {
  
+  .panel-p{
+    padding-left: 10%;
+    padding-right:10%;
+    margin-top:2%;
+    margin-bottom:4%;
+    text-align: justify;
+  }
+ 
   p{
     font-size: 10px;
+  }
+
+  h5{
+    margin-top: 15px;
   }
 
   .burger{
@@ -374,9 +408,8 @@ a{
 
   .text-box {
     grid-column: span 2;
-    padding: 4%;
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     }
       
     #one:checked ~ .panels #one-panel,
@@ -386,13 +419,6 @@ a{
       {
         display:block;
       }
-    
-    .contact-button{
-      font-size: 10px;
-      padding: 1px;
-      width: 5em;
-      height:25px;
-    }
 
     .myForm {
         display: flex;
