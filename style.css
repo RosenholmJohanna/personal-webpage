@@ -9,6 +9,10 @@
     box-sizing: border-box;
     /* margin-left: 5%; */
 }
+
+html{
+    scroll-behavior: smooth;
+}
   
 body{
   font-family:'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
@@ -17,10 +21,6 @@ body{
   background-color:var(--background);
 }
 
-/* header{
-  background-image: url(https://images.pexels.com/photos/3661924/pexels-photo-3661924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
-  background-size: cover;
-} */
   
 /***** FONTS/TEXT  *****************************************************/
 h1{
@@ -78,11 +78,19 @@ button {
   background-color:var(--background);
   border: 0.1em  solid var(--white) ;
   letter-spacing: 0.7px;
+  cursor: pointer; 
 }
 
-.active{
-    margin: 0;
-}
+button:hover {
+    background-color: var(--primary-blue); 
+    color: var(--background);
+    border: 0.1em  solid var(--white) ;
+    transition: all 0.6s ease;
+  }
+
+/* .active{
+    margin: 2%;
+} */
 
 /****** HEADER  ********************************************************/
 header{
@@ -105,7 +113,7 @@ header{
 
 .navigation-header {
   display: flex;
-  height: 40px;
+  height: 5vh;
   align-items: stretch;
   justify-content: flex-end;
   position: relative;
@@ -115,6 +123,8 @@ header{
 nav{
   display: none;
 }
+
+
 
 .burger{
   display: flex;
@@ -144,12 +154,13 @@ nav{
 /****** TAB & PANELS ***************************************************/
 .tabs {
   display: flex; 
-  column-gap: 5%;
+  column-gap: 2%;
   justify-content: space-between;
   height: 50px;
   align-items: center;
   justify-content: center;
   letter-spacing: 0.05em;
+  
 }
 
 .tab{
@@ -166,7 +177,7 @@ nav{
   border-radius: 5px 5px 5px 5px;
   padding:3%;
   margin:2%;
-  background-color: var(--tab-background);
+  /* background-color: var(--tab-background); */
 }
 
 .panel{
@@ -176,7 +187,7 @@ nav{
   animation: fadein 3s;
   /* border: 0.5px solid;  */
   background-color: var(--tab-background);
-  /* border-radius: 0.5px solid; */
+   border-radius: 5px 5px 5px 5px ; 
 }
   @keyframes fadein {
     from{
@@ -213,6 +224,7 @@ nav{
 
 .panel-text{
   font-size: 0.7em;
+  color:white;
 
 }
 
@@ -259,6 +271,9 @@ nav{
    height: 40vh;
    display: flex;
    flex-direction: row;
+   flex-wrap: wrap;
+   align-content: center;
+   justify-content: space-evenly;
    border-radius: 3px;
    padding: 4.1em;
    margin: 2%;
@@ -286,7 +301,7 @@ nav{
  .contact {
    flex: 1; 
    order: 1;
-   margin-right: 5%;
+   
  }
 
  .contact input {
@@ -362,6 +377,7 @@ display: block;
       width: 100%;
       text-align: right;
       margin-right: 5%;
+      background-color: #505778;
     }  
   }
 
@@ -394,13 +410,15 @@ display: block;
   }
 
   nav.open{
-    height: 20vh;
+    margin:0;
+    height: 40vh;
     width: 40%;
   }
 
   nav a{
+    padding: 5%;
     display: block;
-    padding: 5px;
+    margin: 0;
     text-decoration: none;
     background-color: var(--white);
     color: var(--background);
@@ -424,8 +442,13 @@ display: block;
         display: flex;
         flex-direction: column;
         border-radius: 3px;
-        padding: 2.1em;
-      }
+        /* padding-left:2.5em;
+        padding-right:2.5em; */
+        padding:0;
+        padding-bottom:0;
+        margin-top:0;
+    }
+
 }
 
   
