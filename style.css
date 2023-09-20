@@ -3,12 +3,12 @@
   --background:#021118;
   --tab-background:#272a38;
   --primary-blue:#00E0FE;
+  --section:#021822;
 }
 
-*{
+ *{
     box-sizing: border-box;
-    /* margin-left: 5%; */
-}
+} 
 
 html{
     scroll-behavior: smooth;
@@ -20,6 +20,11 @@ body{
   color:var(--white); 
   background-color:var(--background);
 }
+
+/* main{
+  margin-left: 10%;
+  margin-right:10%;
+} */
 
   
 /***** FONTS/TEXT  *****************************************************/
@@ -44,12 +49,6 @@ h3{
   text-align: center;
 }
 
-/* .h4{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
-
 .h4{
     display: block;
     margin-top:5%;
@@ -58,9 +57,8 @@ h3{
 
 h5{
   text-align: center;
-  width: 70%;
+  width: 50%;
   font-size: 1rem;
-  margin: 0px 10px 0 10px;
 }
   
 p{
@@ -88,9 +86,9 @@ button:hover {
     transition: all 0.6s ease;
   }
 
-/* .active{
+.active{
     margin: 2%;
-} */
+}
 
 /****** HEADER  ********************************************************/
 header{
@@ -111,19 +109,15 @@ header{
 }
 
 
-.navigation-header {
+/* .navigation-header {
+  background-color: red;
   display: flex;
   height: 5vh;
   align-items: stretch;
   justify-content: flex-end;
   position: relative;
   flex-direction: column-reverse;
-} 
-
-nav{
-  display: none;
-}
-
+}  */
 
 
 .burger{
@@ -131,17 +125,25 @@ nav{
   position: relative;
   justify-content: center;
   align-items: center;
-  padding-right: 40px; 
+  
     
   &:before {
-   content: "";
+    content: "";
+    background-color: #00E0FE;
+    border: 1px solid;
    position: absolute; 
+   margin-right:5%;
+   margin-top: 2%;
    right: 0;
    top: 0;
    width: 30px;
-   height: 1px;
-   box-shadow: 0 18px 0 0 white, 0 10px 0 0 white, 0 14px 0 0 white;
+   height: 3px;
+   box-shadow: 0 18px 0 0 white, 0 10px 0 0 white;
   }
+}
+
+nav{
+  display: none;
 }
   
 /***** ABOUT ME SECTION  **************************************************/
@@ -152,6 +154,11 @@ nav{
 
 
 /****** TAB & PANELS ***************************************************/
+
+.panel-wrapper{
+  display: block;
+}
+
 .tabs {
   display: flex; 
   column-gap: 2%;
@@ -160,7 +167,6 @@ nav{
   align-items: center;
   justify-content: center;
   letter-spacing: 0.05em;
-  
 }
 
 .tab{
@@ -169,25 +175,21 @@ nav{
   padding:5px 5px;
   display:inline-block;
   border-radius:5px 5px 5px 5px; 
-  /* margin: 0; */
-  /* margin-right: 2%; */
 }
 
 .panels{
-  border-radius: 5px 5px 5px 5px;
   padding:3%;
-  margin:2%;
   /* background-color: var(--tab-background); */
 }
 
 .panel{
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr; 
+  border-bottom: 1px solid;
   display:none; 
   animation: fadein 3s;
-  /* border: 0.5px solid;  */
   background-color: var(--tab-background);
-   border-radius: 5px 5px 5px 5px ; 
+  border-radius: 5px 180px 180px 5px ; 
 }
   @keyframes fadein {
     from{
@@ -201,19 +203,18 @@ nav{
 
 .panel-picture{
   display: flex; 
-  grid-column: span 2; 
-  max-width: 20vh;
-  max-height:20vh; 
+  /* grid-column: span 2;  */
+  width: 20%;
   border-radius: 5px 5px 5px 5px;
+  filter: blur(4);
 }  
 
 .text-box{
   display: flex;
-  grid-column: span 2;
-  /* padding: 2%; */
+  /* grid-column: span 2; */
   flex-direction: row;
   width: 100%;
-  justify-content: center;
+  justify-content: center; 
   align-items: center;
 }
 
@@ -222,26 +223,25 @@ nav{
   font-weight:bold;
 }
 
-.panel-text{
-  font-size: 0.7em;
-  color:white;
-
+.panel-p{
+  width: 150%;
 }
 
 .a-panel{
-  text-align: right;
-  width: 80%;
-  margin: 0 10px 0 10px;
+  text-align: center; 
+  width: 30%;
 }
 
 .radio{
   display:none;
 }
 
-#one:checked ~ .panels #one-panel,
-#two:checked ~ .panels #two-panel,
+/* #one:checked ~ .panels, #one-panel, */
+
+#one:checked ~  .panels #one-panel,
+#two:checked ~  .panels #two-panel,
 #three:checked ~ .panels #three-panel,
-#four:checked ~ .panels #four-panel
+#four:checked ~  .panels #four-panel
 {
   display:flex;
 }
@@ -259,12 +259,12 @@ nav{
 /**** FORM ******************************************************/
 
  .section-form{
-  border-radius: 5px 5px 5px 5px;
-  background-color:var(--tab-background); 
-  margin: 2%;
-  height: 45vh;
+  background-color:var(--section); 
+  margin:0;
+  width: 100%;
+  /* border-top: 0.5px solid;
+  border-bottom: 0.5px solid; */
   /* overflow: auto; */
-
  }
 
  .myForm {
@@ -295,12 +295,13 @@ nav{
 
  .message > textarea {
   flex: 1; 
-  min-width: 18em; 
+  min-width: 22em; 
  }
 
  .contact {
    flex: 1; 
    order: 1;
+   margin:0;
    
  }
 
@@ -336,9 +337,15 @@ select{
 
 /***** FOOTER  **************************************************/
 footer {
-  padding-top: 3%;
-  padding-bottom: 3%;
+  margin: 3%;
+  width: 100%;
+  position: fixed;  
+  bottom:0;
 } 
+
+li{
+  list-style: none;
+}
 
 footer p{
     font-size: 1rem;
@@ -350,16 +357,17 @@ ol{
 
 .footer-container {
     display: block;
+    /* width: 100%; */
     justify-content: center;
     align-items: center;
     text-align: center;
    } 
 
 a{
+  /* width: 50%; */
 display: block;
   margin: 1%; 
   font-size: 0.8em;
-  font-weight: bolder;
   color: var(--white);
   text-transform: uppercase;
   text-decoration: none;
@@ -385,13 +393,51 @@ display: block;
 
 /*******  ON MOBILE  ********/
 @media screen and (max-width: 667px) {
- 
+  
+  .panels{
+   display: flex;
+   justify-content: center;
+   padding:0;
+   margin:0;
+  }
+
+
+  .panel{
+    /* display: flex; */
+    justify-content: center;
+    padding: 2%;
+    width:80%;
+    border-bottom: 0.5px solid;
+    background-color: var(--tab-background);
+    border-radius: 5px 5px 5px 5px ; 
+  }
+
+  .text-box {
+    display: flex;
+    grid-column: span 2; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 100%; */
+    }
+      
+    #one:checked ~ .panels #one-panel,
+    #two:checked ~ .panels #two-panel,
+    #three:checked ~ .panels #three-panel,
+    #four:checked ~ .panels #four-panel
+      {
+        display:block;
+      }
+
+  .panel-picture{
+    width: 50%;
+    height: auto;
+  } 
+
   .panel-p{
-    padding-left: 10%;
-    padding-right:10%;
-    margin-top:2%;
-    margin-bottom:4%;
+    width: 60%;
     text-align: justify;
+    letter-spacing: 0;
   }
  
   p{
@@ -424,31 +470,16 @@ display: block;
     color: var(--background);
   }
 
-  .text-box {
-    grid-column: span 2;
+  .myForm {
+    display: flex;
     flex-direction: column;
-    width: 100%;
-    }
-      
-    #one:checked ~ .panels #one-panel,
-    #two:checked ~ .panels #two-panel,
-    #three:checked ~ .panels #three-panel,
-    #four:checked ~ .panels #four-panel
-      {
-        display:block;
-      }
-
-    .myForm {
-        display: flex;
-        flex-direction: column;
-        border-radius: 3px;
-        /* padding-left:2.5em;
-        padding-right:2.5em; */
-        padding:0;
-        padding-bottom:0;
-        margin-top:0;
-    }
-
+    border-radius: 3px;
+     /* padding-left:2.5em;
+    padding-right:2.5em; */
+    padding:0;
+    padding-bottom:0;
+    margin-top:0;
+  }
 }
 
   
