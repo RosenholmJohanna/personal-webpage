@@ -1,7 +1,15 @@
 :root{
   --white:#fffff7;
   --background:#021118;
+  --tab-background:#272a38;
+  --primary-blue:#00E0FE;
+  --section:#021822;
 }
+
+html{
+  scroll-behavior: smooth;
+}
+
   
 body{
   font-family:'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
@@ -68,6 +76,115 @@ header{
   text-align: center;
   margin: 8%;
 }
+
+/****** TAB & PANELS ***************************************************/
+
+.panel-wrapper{
+  display: block;
+}
+
+.tabs {
+  display: flex; 
+  column-gap: 2%;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.05em;
+}
+
+.tab{
+  font-size: 0.80em;
+  cursor: pointer;
+  padding:5px 5px;
+  display:inline-block;
+  border-radius:5px 5px 5px 5px; 
+}
+
+/* .panels{
+  padding:3%; 
+  background-color: var(--tab-background); 
+} */
+
+.panel{
+  display: grid;
+  grid-template-columns: 1fr; 
+  display:none; 
+  animation: fadein 3s;
+  /* background-color: var(--tab-background); */
+  /* border-radius: 5px 180px 180px 5px ;  */
+}
+  @keyframes fadein {
+    from{
+      opacity:0;
+    }
+
+    to{
+      opacity:1;
+    }
+}
+
+.panel-picture{
+  display: flex; 
+  /* grid-column: span 2;  */
+  width: 20%;
+  /* border-radius: 5px 5px 5px 5px; */
+  border-radius:50%;
+}  
+
+.panel-text-box{
+  padding:3%;
+  display: flex;
+  /* grid-column: span 2; */
+  flex-direction: row;
+  width: 100%;
+  justify-content: center; 
+  align-items: center;
+}
+
+.panel-title-text{
+  text-align: center;
+  width: 50%;
+  font-size: 0.7em;
+}
+
+
+/* .panel-title{
+  font-size:1em;
+  font-weight:bold;
+} */
+
+.panel-p{
+  width: 150%;
+}
+
+.a-panel{
+  text-align: center; 
+  width: 30%;
+}
+
+.radio{
+  display:none;
+}
+
+/* #one:checked ~ .panels, #one-panel, */
+#one:checked ~  .panels #one-panel,
+#two:checked ~  .panels #two-panel,
+#three:checked ~ .panels #three-panel,
+#four:checked ~  .panels #four-panel{
+  display:flex;
+  /* border-bottom: 0.5px solid; */
+}
+
+#one:checked ~ .tabs #one-tab, 
+#two:checked ~ .tabs #two-tab,
+#three:checked ~ .tabs #three-tab,
+#four:checked ~ .tabs #four-tab{
+  background-color: var(--tab-background);
+  color: var(--primary-blue);
+  border-bottom: 0.5px solid #00E0FE;
+}
+
 
 /**** FORM ******************************************************/
 .section-form{
@@ -163,6 +280,7 @@ button {
   grid-gap: 40px;
   gap:40%;
   padding:2%;
+  background-color: var(--section);
 }
 
 .footer-list-container{
