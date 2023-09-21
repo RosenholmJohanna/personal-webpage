@@ -8,15 +8,25 @@
 
 html{
   scroll-behavior: smooth;
+  min-height: 100%;
+  max-height: 100%;
 }
 
-  
 body{
   font-family:'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
   margin: 0;
   color:var(--white); 
   background-color:var(--background);
+  min-height: 100%;
+  max-height: 100%;
 }
+
+main{
+  margin-left:10%;
+  margin-right: 10%;
+}
+
+
   
 /***** FONTS/TEXT  *****************************************************/
 h1{
@@ -26,31 +36,33 @@ h1{
   margin-left: 2%;
   padding-top: 1%;
   font-family: 'Tangerine';
-  font-size: 45px;
 }
   
 h2{
-  font-size: 16px;
   font-weight: bold;  
   margin-top:0;
 }
   
 h3{
-  font-size: 14px;
   text-align: center;
 }
   
 p{
-  font-size: 12px;
+  font-size: 0.6em;
   margin:0;
 }
 
 a{
-  font-size: 0.7em;
+  font-size: 0.6em; 
   color: var(--white);
   text-transform: uppercase; 
   text-decoration: none; 
 } 
+
+li, ul{
+  list-style: none;
+  padding: 0;
+}
 
 
 /****** HEADER  ********************************************************/
@@ -70,17 +82,80 @@ header{
   object-fit: cover;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+#menu-toggle{
+  visibility: hidden;
+}
+
+
+.menu-icon {
+  font-size: 30px;
+  cursor: pointer;
+  display: none; 
+}
+
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+}
+
+
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .menu-icon {
+    display: block; 
+  }
+
+
+  .menu li {
+    margin: 10px 0;
+  }
+
+ 
+  #menu-toggle:checked + .menu-icon::before {
+    content: '✕'; 
+  }
+}
+
   
 /***** ABOUT ME SECTION  **************************************************/
 .about-me-section{
   text-align: center;
-  margin: 8%;
+  margin: 12%;
 }
 
 /****** TAB & PANELS ***************************************************/
 
 .panel-wrapper{
   display: block;
+  margin-bottom: 10%;
 }
 
 .tabs {
@@ -94,7 +169,7 @@ header{
 }
 
 .tab{
-  font-size: 0.80em;
+  font-size: 0.60em; 
   cursor: pointer;
   padding:5px 5px;
   display:inline-block;
@@ -126,7 +201,6 @@ header{
 
 .panel-picture{
   display: flex; 
-  /* grid-column: span 2;  */
   width: 20%;
   /* border-radius: 5px 5px 5px 5px; */
   border-radius:50%;
@@ -145,14 +219,7 @@ header{
 .panel-title-text{
   text-align: center;
   width: 50%;
-  font-size: 0.7em;
 }
-
-
-/* .panel-title{
-  font-size:1em;
-  font-weight:bold;
-} */
 
 .panel-p{
   width: 150%;
@@ -207,7 +274,7 @@ header{
  textarea{
   padding: 0.5em;
   margin:1%;
-  font-size: 12px;
+  /* font-size: 12px; */
  }
 
  .message {
@@ -244,14 +311,10 @@ header{
   border-radius: 3px 3px 3px 3px;
 } 
 
-/* .message-label {
-  margin-bottom:2%;
-  font-size: 12px;
-} */
 
 .contact-label, .message-label{
   margin:0;
-  font-size: 12px;
+  /* font-size: 12px; */
 } 
 
 select{
@@ -275,17 +338,18 @@ button {
 
 
 /***** FOOTER  **************************************************/
-.footer-wrapper{
-  display: grid;
-  grid-gap: 40px;
-  gap:40%;
-  padding:2%;
+
+footer{
+  padding: 2%;
   background-color: var(--section);
 }
 
-.footer-list-container{
-  list-style: none;
-  padding:0;
+.footer-wrapper{
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start; 
 }
 
 .list-heading{
@@ -295,8 +359,8 @@ button {
 .list-item{
   display: flex;
   flex-direction: row;
-  font-size: 0.7em;
-  margin-bottom: 2%;
+  margin-bottom: 15%;
+  align-items: center;
 }
 
 .footer-list-icon{
@@ -305,6 +369,58 @@ button {
 }
 
 .footer-link{
-  text-decoration-line:underline ;
+  margin-left:5%;
 }
+
+
+
+
+
+/******  ON TABLET  ********/
+@media (min-width: 668px ) {
+ 
+}
+
+/*******  ON MOBILE  ********/
+@media screen and (max-width: 667px) {
+
+  footer{  
+    position: fixed;
+   bottom:0; 
+    width: 100%;
+  }
   
+  .footer-wrapper{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+    background-color: var(--section);
+  }
+
+  .social-media-container,
+  .contact-me-container{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; 
+  }
+
+  .list-heading{
+    margin:0;
+    letter-spacing: 0.7px;
+  }
+  
+  .list-item{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2%;
+    align-items: center;
+  }
+
+  .footer-link{
+    margin-bottom: 4%;
+  }
+
+}
+
