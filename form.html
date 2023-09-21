@@ -12,25 +12,44 @@
       @import url(https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap);
     </style>
   </head>
-
 <header>
-  <div> <img class="profile-picture" src="profilbild.jpg" alt="profilbild"></div> 
   <div>
     <h1>Johanna Rosenholm</h1>
     <p class="sub-header">Min personliga webbsida</p>
   </div>
-  <a href="form.html">contact me</a>
 </header>
       
-<body>  
-  <section class="about-me-section">
-    <p>
-      accusamus mollitia officiis ex voluptates quasi facere laboriosam magnam
-      harum special. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Reprehenderit, reiciendis omnis! Ducimus aperiam mollitia quibusdam assumenda excepturi! 
-    </p>
-  </section> 
+<body> 
 
+<section class="section-form"> 
+    <h3>Contact</h3>
+    <form class="myForm" id="contact-me">
+      <div class="message"> 
+        <label class="message-label" for="textarea-message">Message</label>
+        <textarea id="textarea-message" required></textarea>
+        <button class="contact-button" type="submit">send</button>
+      </div>
+          
+      <div class="contact">
+        <label class="contact-label" for="name">Name</label>
+         <input type="text" id="name" required>
+          
+        <label class="contact-label" for="email">Email Address</label>
+          <input type="email" id="email"> 
+        
+        <label class="contact-label" for="country">Country</label>
+        <div class ="select">
+          <select id="country" title="country">
+            <option value="" selected="selected">Select One</option>
+            <option value="sweden" >Sweden</option>
+            <option value="italy" >Italy</option>
+            <option value="spain" >spain</option>
+          </select>
+        </div>
+      </div>
+    </form>
+ </section> 
+    
   <footer>
     <div class="footer-wrapper">  
       <div class="footer-container" id="social-media">

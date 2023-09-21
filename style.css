@@ -38,6 +38,7 @@ p{
 }
 
 a{
+  font-size: 0.7em;
   color: var(--white);
   text-transform: uppercase; 
   text-decoration: none; 
@@ -68,6 +69,93 @@ header{
   margin: 8%;
 }
 
+/**** FORM ******************************************************/
+.section-form{
+  background-color:var(--section); 
+  margin:0;
+  width: 100%;
+ }
+
+.myForm {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  border-radius: 3px;
+  padding: 4.1em;
+  margin: 2%;
+  border: 0.5px solid;
+ }
+
+ textarea{
+  padding: 0.5em;
+  margin:1%;
+  font-size: 12px;
+ }
+
+ .message {
+   display: flex;
+   flex-direction: column;
+   order: 2;
+   min-height: 15vh;
+   width: 50%;
+ }
+
+ .message > textarea {
+  flex: 1; 
+  /* max-width: 100%;  */
+ }
+
+ .contact {
+   flex: 1; 
+   order: 1;
+   margin:0;
+ }
+
+ .contact input {
+   display: block;
+   width: 80%;
+   margin-top: 1%;
+   margin-bottom: 2%;
+ }
+
+ .contact input, 
+ .contact select,
+ textarea {
+  padding: 0.5em; 
+  border-style: none; 
+  border-radius: 3px 3px 3px 3px;
+} 
+
+/* .message-label {
+  margin-bottom:2%;
+  font-size: 12px;
+} */
+
+.contact-label, .message-label{
+  margin:0;
+  font-size: 12px;
+} 
+
+select{
+ margin-top:1%;
+ /* margin-bottom:2%; */
+}
+
+button {
+  width: 6em;
+  height:32px;
+  border-radius:10px;
+  justify-content: center;
+  color:var(--white); 
+  background-color:var(--background);
+  border: 0.1em  solid var(--white) ;
+  letter-spacing: 0.7px;
+  cursor: pointer; 
+}
+
+
+
 
 /***** FOOTER  **************************************************/
 .footer-wrapper{
@@ -87,10 +175,10 @@ header{
 }
 
 .list-item{
-  font-size: 0.7em;
-  margin-bottom: 2%;
   display: flex;
   flex-direction: row;
+  font-size: 0.7em;
+  margin-bottom: 2%;
 }
 
 .footer-list-icon{
