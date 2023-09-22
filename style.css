@@ -6,10 +6,14 @@
   --section:#021822;
 }
 
+/* *{
+  box-sizing: border-box;
+} */
+
 html{
   scroll-behavior: smooth;
-  min-height: 100%;
-  max-height: 100%;
+   min-height: 110%;
+  max-height: 180%; 
 }
 
 body{
@@ -17,14 +21,15 @@ body{
   margin: 0;
   color:var(--white); 
   background-color:var(--background);
-  min-height: 100%;
-  max-height: 100%;
+   min-height: 110%;
+  max-height: 180%; 
+  scroll-behavior: smooth;
 }
 
-main{
+/* main{
   margin-left:10%;
   margin-right: 10%;
-}
+} */
 
 
   
@@ -140,7 +145,9 @@ header{
 
  
   #menu-toggle:checked + .menu-icon::before {
-    content: '✕'; 
+    content: 'X'; 
+    font-size: 0.7em;
+    margin-right: 5%;
   }
 }
 
@@ -149,6 +156,7 @@ header{
 .about-me-section{
   text-align: center;
   margin: 12%;
+  
 }
 
 /****** TAB & PANELS ***************************************************/
@@ -176,10 +184,10 @@ header{
   border-radius:5px 5px 5px 5px; 
 }
 
-/* .panels{
-  padding:3%; 
-  background-color: var(--tab-background); 
-} */
+.panels{
+  background-color: var(--primary-blue); 
+  min-height: 5%;
+}
 
 .panel{
   display: grid;
@@ -209,7 +217,6 @@ header{
 .panel-text-box{
   padding:3%;
   display: flex;
-  /* grid-column: span 2; */
   flex-direction: row;
   width: 100%;
   justify-content: center; 
@@ -248,16 +255,19 @@ header{
 #three:checked ~ .tabs #three-tab,
 #four:checked ~ .tabs #four-tab{
   background-color: var(--tab-background);
-  color: var(--primary-blue);
+  /* color: var(--primary-blue); */
   border-bottom: 0.5px solid #00E0FE;
 }
 
 
 /**** FORM ******************************************************/
-.section-form{
-  background-color:var(--section); 
-  margin:0;
-  width: 100%;
+.div-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left:15%;
+  margin-right:15%;
+  height: 55vh;
  }
 
 .myForm {
@@ -265,16 +275,16 @@ header{
   flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
+  justify-content: center;
   border-radius: 3px;
-  padding: 4.1em;
-  margin: 2%;
-  border: 0.5px solid;
+  padding: 4em;
+  width: 60%;
+  background-color:var(--section); 
  }
 
  textarea{
   padding: 0.5em;
   margin:1%;
-  /* font-size: 12px; */
  }
 
  .message {
@@ -340,8 +350,11 @@ button {
 /***** FOOTER  **************************************************/
 
 footer{
-  padding: 2%;
+  /* padding: 2%; */
   background-color: var(--section);
+  position: fixed;
+  bottom:0;
+  width: 100%;
 }
 
 .footer-wrapper{
@@ -383,19 +396,60 @@ footer{
 
 /*******  ON MOBILE  ********/
 @media screen and (max-width: 667px) {
-
+  .panels{
+    display: flex;
+    justify-content: center;
+    padding:0;
+    margin:0;
+   }
+ 
+   .panel{
+     /* display: flex; */
+     justify-content: center;
+     opacity: 0.7;
+     padding: 2%;
+     width:100%;
+     border-bottom: 0.5px solid;
+     background-color: var(--white);
+     color: var(--section);
+     /* border-radius: 5px 5px 5px 5px ;  */
+   }
+ 
+   .panel-text-box {
+     display: flex;
+     padding: 0;
+     flex-direction: column;
+     }
+       
+     #one:checked ~ .panels #one-panel,
+     #two:checked ~ .panels #two-panel,
+     #three:checked ~ .panels #three-panel,
+     #four:checked ~ .panels #four-panel
+       {
+         display:block;
+       }
+ 
+   .panel-picture{
+     width: 50%;
+     height: auto;
+   } 
+ 
+   .panel-p{
+     width: 60%;
+     letter-spacing: 0.1em;
+   }
+ 
   footer{  
     position: fixed;
    bottom:0; 
     width: 100%;
-  }
+  } 
+
   
   .footer-wrapper{
     display: flex;
     flex-direction: column;
-    /* justify-content: center;
-    align-items: center; */
-    background-color: var(--section);
+    margin:0;
   }
 
   .social-media-container,
@@ -422,5 +476,74 @@ footer{
     margin-bottom: 4%;
   }
 
+  .div-form{
+    margin:0;
+    width: 100%;
+   }
+
+   .myForm {
+    display: flex;
+    flex-direction: column;
+    border-radius: 3px;
+    padding:2%;
+    padding-bottom:0;
+    margin-top:0;
+    width: 90%;
+  }
+
+   textarea{
+    margin:0 0 3% 0;
+    padding: 0.5em;
+    font-size: 12px;
+   }
+  
+   .message {
+     display: flex;
+     flex-direction: column;
+     min-height: 20vh;
+     width: 100%;
+   }
+  
+   .message > textarea {
+    flex: 1; 
+    
+   }
+  
+   .contact {
+    width: 100%;
+     flex: 1; 
+     order: 1;
+     margin:0;
+     
+   }
+  
+   .contact input {
+  display: block;
+     width: 90%;
+     margin-top: 1%;
+     margin-bottom: 2%;
+   }
+  
+   .contact input, 
+   .contact select,
+   textarea {
+    padding: 0.5em; 
+    border-style: none; 
+    border-radius: 3px 3px 3px 3px;
+  } 
+  
+  .message-label {
+    margin-bottom:2%;
+    font-size: 12px;
+  }
+  
+  .contact-label{
+    margin:0;
+    font-size: 12px;
+  } 
+  select{
+   margin-top:1%;
+   margin-bottom:2%;
+  }
 }
 
