@@ -29,21 +29,31 @@ body{
 }
   
 /***** FONTS/TEXT  *****************************************************/
-h1{
-  width:60%;
-  margin-bottom: 1%;
-  margin-left: 3%;
-  padding-top: 1%;
-  font-family: 'Tangerine';
+
+.header-text{
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-90%); 
+  letter-spacing: 0.05em;
+}
+.header-name-text{
+  font-size: 1.3em;
+  font-weight: 500;
 }
 
 .sub-header{
-  margin-left:3%;
+  font-family: 'Tangerine';
+    font-size: 2em;
+
 }
   
 h2{
-  font-weight: bold;  
-  margin-top:0;
+  font-size: 0.9em;  
+  font-weight: 500;
+  margin-bottom:3%;
+  width: 100%;
 }
   
 h3{
@@ -51,12 +61,14 @@ h3{
 }
   
 p{
+  text-align: left;
   font-size: 0.7em;
   margin:0;
 }
 
 a{
-  font-size: 0.6em; 
+  font-size: 0.7em; 
+  font-weight: 500;
   color: var(--white);
   text-transform: uppercase; 
   text-decoration: none; 
@@ -70,10 +82,15 @@ li, ul{
 
 /****** HEADER  ********************************************************/
 header{
-  height:25vh;
-  position:relative;
+  background-image: url("https://images.pexels.com/photos/3575654/pexels-photo-3575654.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  height:40vh;
+  border-bottom: 0.1em solid;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: saturate(70%);
 }
-  
+
 .profile-picture {
   height: 16vh;
   width: 16vh;
@@ -82,6 +99,7 @@ header{
   right: 5%; 
   bottom: -6%;
   object-fit: cover;
+  border: 0.1em solid;
 }
 
 
@@ -94,12 +112,17 @@ header{
 .nav-items {
   display: flex;
   justify-content: flex-end;
-  background-color: transparent;
+  background-color: var(--background);
+ 
+  
 }
 
 .nav-items li {
-  padding-top:2%;
-  margin-right: 20px;
+  padding:1%;
+  padding-right:5%;
+  color: var(--background);
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 
@@ -107,19 +130,17 @@ header{
   color: var(--primary-blue)
 }
 
-label, #menu-togle, input{
+.menu-icon, #menu-togle, input{
   display: none;
 }
   
   
 /***** ABOUT ME SECTION  **************************************************/
 .about-me-section{
-  text-align: center;
   margin-left: 15%;
   margin-right: 15%;
   margin-bottom: 3%;
-  margin-top: 10%;
-  
+  margin-top: 15%;
 }
 
 /****** TAB & PANELS ***************************************************/
@@ -127,6 +148,7 @@ label, #menu-togle, input{
 .panel-wrapper{
   display: block;
   margin-bottom: 10%;
+  
 }
 
 .tabs {
@@ -148,7 +170,7 @@ label, #menu-togle, input{
 }
 
 .panels{
-  min-height: 5%;
+  margin-bottom:5% ;
 }
 
 .panel{
@@ -172,13 +194,14 @@ label, #menu-togle, input{
 
 .panel-picture{
   display: flex; 
-  width: 20%;
+  width: 25%;
+  height:auto;
   border-radius: 5px 5px 5px 5px; 
   /* border-radius:50%; */
 }  
 
 .panel-text-box{
-  padding:3%;
+  padding:1%;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -290,12 +313,10 @@ label, #menu-togle, input{
 
 .contact-label, .message-label{
   margin:0;
-  /* font-size: 12px; */
 } 
 
 select{
  margin-top:1%;
- /* margin-bottom:2%; */
 }
 
 button {
@@ -317,6 +338,8 @@ button {
 
 footer{
   padding: 3%;
+  padding-top:1%;
+  padding-bottom: 0;
   background-color: var(--section);
   position: fixed;
   bottom:0;
@@ -364,11 +387,11 @@ margin-bottom: 10%;
 
 /*******  ON MOBILE  ********/
 @media screen and (max-width: 668px) {
-  #menu-togle{
+  /* #menu-togle{
     display:visible;
-  }
+  } */
 
-  .menu-icon {
+  .menu-icon{
     display: block;
     font-size: 24px;
     cursor: pointer;
@@ -376,6 +399,9 @@ margin-bottom: 10%;
     top: 10px;
     right: 10px;
     z-index: 3; 
+    background-color: var(--background);
+    padding: 1%;
+    border-radius: 12%;
   }
 
   #menu-toggle {
@@ -406,6 +432,7 @@ margin-bottom: 10%;
     justify-content: center;
     padding:0;
     margin:0;
+    
    }
  
    .panel{
@@ -445,12 +472,6 @@ margin-bottom: 10%;
      width: 80%;
      letter-spacing: 0.1em;
    }
- 
-  footer{  
-    position: fixed;
-   top:77%; 
-    width: 100%;
-  } 
 
   
   .footer-wrapper{

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head> 
-    <meta charset="utf-8" />
+  <head>
+    <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personlig Webbsida</title>
@@ -12,23 +12,27 @@
       @import url(https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap);
     </style>
   </head>
-<header>
-  <div>
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">≡</label>
-    <nav class="navbar">
-      <ul class="nav-items">
-        <li><a href="#social-media">Social</a></li>
-        <li><a href="form.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-  <div>
-    <h1>Johanna Rosenholm</h1>
-    <p class="sub-header">Min personliga webbsida</p>
-  </div>
-</header>
-<body> 
+  <body>
+  <header>
+    <div>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">≡</label>
+      <nav class="navbar">
+        <ul class="nav-items">
+          <li><a href="index.html">Hem</a></li>
+          <li><a href="#social-media">Social</a></li>
+          <li><a href="form.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div> <img class="profile-picture" src="profilbild.JPG" alt="profilbild"></div> 
+   
+    <div class="header-text"> 
+      <h1 class="header-name-text">Johanna Rosenholm</h1>
+      <p class="sub-header">Min personliga webbsida</p>
+    </div> 
+  </header>
+ 
 <main>
 <section>
 <div class="div-form"> 
@@ -36,16 +40,16 @@
     <form class="myForm" id="contact-me">
       <div class="message"> 
         <label class="message-label" for="textarea-message">Message</label>
-        <textarea id="textarea-message" required></textarea>
+        <textarea  placeholder="message" id="textarea-message" required></textarea>
         <button class="contact-button" type="submit">send</button>
       </div>
           
       <div class="contact">
         <label class="contact-label" for="name">Name</label>
-         <input type="text" id="name" required>
+         <input  placeholder="name" type="text" id="name" required>
           
         <label class="contact-label" for="email">Email Address</label>
-          <input type="email" id="email"> 
+          <input  placeholder="email" type="email" id="email"> 
         
         <label class="contact-label" for="country">Country</label>
         <div class ="select">
@@ -61,10 +65,7 @@
   </div> 
 </section>
 
-
-
 </main>
-  <footer>
     <footer>
         <div class="footer-wrapper">  
           <div class="contact-me-container"> 
@@ -168,5 +169,3 @@
       </footer> 
 </body>
 </html>
-
-      
