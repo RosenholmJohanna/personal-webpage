@@ -185,6 +185,7 @@ input {
   display: flex;
   width: 70%;
   height: 100%;
+  border-radius: 2% 2% 2% 2%;
 }
 
 .panel-text-box {
@@ -459,7 +460,7 @@ footer{
 
   .panel-picture {
     width: 50%;
-  height: 50%;
+    height: 50%;
   }
 
   .panel-title-text {
